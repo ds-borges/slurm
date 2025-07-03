@@ -1,0 +1,72 @@
+===================================================================
+ARQUIVO 3: GUIA DE INSTALAÇÃO DO SLURM (NÓ MESTRE)
+===================================================================
+
+Este arquivo contém todos os comandos necessários para instalar e configurar completamente o nó Mestre do Slurm.
+
+**Pré-requisito:** Antes de executar os comandos abaixo, certifique-se de que todos os arquivos de configuração (`slurm.conf`, `slurmdbd.conf`, `cgroup.conf`, `suspend.sh`, `resume.sh`, `mac_addresses.list`) estejam no seu diretório atual.
+
+
+--- ETAPA 3.1: INSTALAÇÃO DOS PACOTES E BANCO DE DADOS ---
+
+sudo apt-get install -y mariadb-server slurm-wlm slurmdbd
+sudo mysql
+# Dentro do prompt do MySQL, execute os seguintes comandos:
+CREATE DATABASE slurm_acct_db;
+GRANT ALL ON slurm_acct_db.* TO 'slurm'@'localhost' IDENTIFIED BY 'bccufj07' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit
+
+
+--- ETAPA 3.2: COPIAR ARQUIVOS DE CONFIGURAÇÃO PARA O DIRETÓRIO DO SLURM ---
+
+# Os comandos abaixo copiarão os arquivos de configuração do seu diretório
+# atual para o diretório de configuração do Slurm (/etc/slurm/).
+
+sudo mkdir -p /etc/slurm/
+sudo cp slurm.conf /etc/slurm/
+sudo cp slurmdbd.conf /etc/slurm/
+sudo cp cgroup.conf /etc/slurm/
+sudo cp resume.sh /etc/slurm/
+sudo cp suspend.sh /etc/slurm/
+sudo cp mac_addresses.list /etc/slurm/
+
+
+--- ETAPA 3.3: AJUSTAR PROPRIETÁRIO E PERMISSÕES DOS ARQUIVOS ---
+
+sudo chown -R slurm:slurm /etc/slurm/
+sudo chmod 600 /etc/slurm/slurmdbd.conf
+sudo chmod +x /etc/slurm/resume.sh /etc/slurm/suspend.sh
+
+
+--- ETAPA 3.4: CRIAÇÃO DE DIRETÓRIOS ADICIONAIS DO SLURM ---
+
+sudo mkdir -p /var/spool/slurmctld /var/log/slurm /var/run/slurm
+sudo chown slurm:slurm /var/spool/slurmctld
+sudo chown slurm /var/log/slurm /var/run/slurm
+sudo touch /var/log/slurm/slurmctld.log
+sudo chown slurm /var/log/slurmctld.log
+
+
+--- ETAPA 3.5: CONFIGURAÇÃO DE DEPENDÊNCIAS DE SERVIÇO E INICIALIZAÇÃO ---
+
+# O comando a seguir abre um editor para criar um arquivo de override.
+# Adicione o conteúdo de dependência do chrony para garantir que o tempo
+# esteja sincronizado antes de iniciar os serviços do Slurm.
+#
+# [Unit]
+# Wants=chrony-wait.service
+# After=chrony-wait.service
+#
+sudo systemctl edit slurmdbd.service
+sudo systemctl edit slurmctld.service
+
+# Recarrega, habilita e inicia os serviços do Mestre
+sudo systemctl daemon-reload
+sudo systemctl enable slurmdbd
+sudo systemctl restart slurmdbd
+sudo systemctl enable slurmctld
+sudo systemctl restart slurmctld
+
+# Verifica o status dos serviços
+sudo systemctl status slurmdbd slurmctld
