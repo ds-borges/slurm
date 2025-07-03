@@ -1,0 +1,24 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 14:50:30 -03
+ID do Job: 377
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Limite para Fibonacci: F(100)
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_377
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 3 nó(s)...
+
+===================================
+  Resultado Final: F(100) = 3736710778780434371
+===================================
+
+
+=========================================================
+FIM DO JOB: sex 20 jun 2025 14:50:31 -03
+Tempo total de execução do script: 1 segundos.
+=========================================================

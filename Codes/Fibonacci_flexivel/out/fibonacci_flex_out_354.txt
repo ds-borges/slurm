@@ -1,0 +1,150 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 14:28:24 -03
+ID do Job: 354
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Limite para Fibonacci: F(40)
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_354
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 3 nó(s)...
+[Mestre] Distribuindo o cálculo da série F(0) a F(40) para 2 trabalhadores.
+[Mestre] Enviando tarefa F(0) para o Trabalhador 1.
+[Mestre] Enviando tarefa F(1) para o Trabalhador 2.
+[Trabalhador 1] Recebi tarefa F(0). Calculando...
+[Mestre] Recebeu F(0) = 0 do Trabalhador 1. (1/41 concluído)
+[Mestre] Recebeu F(1) = 1 do Trabalhador 2. (2/41 concluído)
+[Trabalhador 1] Recebi tarefa F(2). Calculando...
+[Trabalhador 2] Recebi tarefa F(1). Calculando...
+[Mestre] Recebeu F(3) = 2 do Trabalhador 2. (3/41 concluído)
+[Mestre] Recebeu F(2) = 1 do Trabalhador 1. (4/41 concluído)
+[Trabalhador 2] Recebi tarefa F(3). Calculando...
+[Mestre] Recebeu F(4) = 3 do Trabalhador 2. (5/41 concluído)
+[Trabalhador 1] Recebi tarefa F(5). Calculando...
+[Trabalhador 2] Recebi tarefa F(4). Calculando...
+[Mestre] Recebeu F(6) = 8 do Trabalhador 2. (6/41 concluído)
+[Mestre] Recebeu F(5) = 5 do Trabalhador 1. (7/41 concluído)
+[Trabalhador 2] Recebi tarefa F(6). Calculando...
+[Mestre] Recebeu F(7) = 13 do Trabalhador 2. (8/41 concluído)
+[Trabalhador 1] Recebi tarefa F(8). Calculando...
+[Trabalhador 2] Recebi tarefa F(7). Calculando...
+[Mestre] Recebeu F(8) = 21 do Trabalhador 1. (9/41 concluído)
+[Mestre] Recebeu F(9) = 34 do Trabalhador 2. (10/41 concluído)
+[Trabalhador 2] Recebi tarefa F(9). Calculando...
+[Mestre] Recebeu F(11) = 89 do Trabalhador 2. (11/41 concluído)
+[Trabalhador 1] Recebi tarefa F(10). Calculando...
+[Trabalhador 2] Recebi tarefa F(11). Calculando...
+[Mestre] Recebeu F(10) = 55 do Trabalhador 1. (12/41 concluído)
+[Mestre] Recebeu F(12) = 144 do Trabalhador 2. (13/41 concluído)
+[Trabalhador 2] Recebi tarefa F(12). Calculando...
+[Mestre] Recebeu F(14) = 377 do Trabalhador 2. (14/41 concluído)
+[Trabalhador 1] Recebi tarefa F(13). Calculando...
+[Trabalhador 2] Recebi tarefa F(14). Calculando...
+[Mestre] Recebeu F(15) = 610 do Trabalhador 2. (15/41 concluído)
+[Mestre] Recebeu F(13) = 233 do Trabalhador 1. (16/41 concluído)
+[Trabalhador 2] Recebi tarefa F(15). Calculando...
+[Mestre] Recebeu F(16) = 987 do Trabalhador 2. (17/41 concluído)
+[Trabalhador 2] Recebi tarefa F(16). Calculando...
+[Trabalhador 1] Recebi tarefa F(17). Calculando...
+[Mestre] Recebeu F(17) = 1597 do Trabalhador 1. (18/41 concluído)
+[Mestre] Recebeu F(18) = 2584 do Trabalhador 2. (19/41 concluído)
+[Trabalhador 2] Recebi tarefa F(18). Calculando...
+[Mestre] Recebeu F(20) = 6765 do Trabalhador 2. (20/41 concluído)
+[Trabalhador 1] Recebi tarefa F(19). Calculando...
+[Trabalhador 2] Recebi tarefa F(20). Calculando...
+[Mestre] Recebeu F(19) = 4181 do Trabalhador 1. (21/41 concluído)
+[Mestre] Recebeu F(21) = 10946 do Trabalhador 2. (22/41 concluído)
+[Trabalhador 2] Recebi tarefa F(21). Calculando...
+[Mestre] Recebeu F(23) = 28657 do Trabalhador 2. (23/41 concluído)
+[Trabalhador 1] Recebi tarefa F(22). Calculando...
+[Trabalhador 2] Recebi tarefa F(23). Calculando...
+[Mestre] Recebeu F(22) = 17711 do Trabalhador 1. (24/41 concluído)
+[Mestre] Recebeu F(24) = 46368 do Trabalhador 2. (25/41 concluído)
+[Trabalhador 2] Recebi tarefa F(24). Calculando...
+[Mestre] Recebeu F(26) = 121393 do Trabalhador 2. (26/41 concluído)
+[Trabalhador 1] Recebi tarefa F(25). Calculando...
+[Trabalhador 2] Recebi tarefa F(26). Calculando...
+[Mestre] Recebeu F(25) = 75025 do Trabalhador 1. (27/41 concluído)
+[Mestre] Recebeu F(27) = 196418 do Trabalhador 2. (28/41 concluído)
+[Trabalhador 2] Recebi tarefa F(27). Calculando...
+[Mestre] Recebeu F(29) = 514229 do Trabalhador 2. (29/41 concluído)
+[Trabalhador 1] Recebi tarefa F(28). Calculando...
+[Trabalhador 2] Recebi tarefa F(29). Calculando...
+[Mestre] Recebeu F(28) = 317811 do Trabalhador 1. (30/41 concluído)
+[Mestre] Recebeu F(30) = 832040 do Trabalhador 2. (31/41 concluído)
+[Trabalhador 2] Recebi tarefa F(30). Calculando...
+[Mestre] Recebeu F(32) = 2178309 do Trabalhador 2. (32/41 concluído)
+[Trabalhador 1] Recebi tarefa F(31). Calculando...
+[Trabalhador 2] Recebi tarefa F(32). Calculando...
+[Mestre] Recebeu F(31) = 1346269 do Trabalhador 1. (33/41 concluído)
+[Mestre] Recebeu F(33) = 3524578 do Trabalhador 2. (34/41 concluído)
+[Trabalhador 2] Recebi tarefa F(33). Calculando...
+[Mestre] Recebeu F(35) = 9227465 do Trabalhador 2. (35/41 concluído)
+[Trabalhador 1] Recebi tarefa F(34). Calculando...
+[Trabalhador 2] Recebi tarefa F(35). Calculando...
+[Mestre] Recebeu F(34) = 5702887 do Trabalhador 1. (36/41 concluído)
+[Mestre] Recebeu F(36) = 14930352 do Trabalhador 2. (37/41 concluído)
+[Trabalhador 2] Recebi tarefa F(36). Calculando...
+[Mestre] Recebeu F(38) = 39088169 do Trabalhador 2. (38/41 concluído)
+[Trabalhador 1] Recebi tarefa F(37). Calculando...
+[Trabalhador 2] Recebi tarefa F(38). Calculando...
+[Mestre] Recebeu F(37) = 24157817 do Trabalhador 1. (39/41 concluído)
+[Mestre] Recebeu F(39) = 63245986 do Trabalhador 2. (40/41 concluído)
+[Trabalhador 2] Recebi tarefa F(39). Calculando...
+[Trabalhador 1] Recebi tarefa F(40). Calculando...
+[Mestre] Recebeu F(40) = 102334155 do Trabalhador 1. (41/41 concluído)
+
+--- Resultados Finais Ordenados ---
+F(0) = 0
+F(1) = 1
+F(2) = 1
+F(3) = 2
+F(4) = 3
+F(5) = 5
+F(6) = 8
+F(7) = 13
+F(8) = 21
+F(9) = 34
+F(10) = 55
+F(11) = 89
+F(12) = 144
+F(13) = 233
+F(14) = 377
+F(15) = 610
+F(16) = 987
+F(17) = 1597
+F(18) = 2584
+F(19) = 4181
+F(20) = 6765
+F(21) = 10946
+F(22) = 17711
+F(23) = 28657
+F(24) = 46368
+F(25) = 75025
+F(26) = 121393
+F(27) = 196418
+F(28) = 317811
+F(29) = 514229
+F(30) = 832040
+F(31) = 1346269
+F(32) = 2178309
+F(33) = 3524578
+F(34) = 5702887
+F(35) = 9227465
+F(36) = 14930352
+F(37) = 24157817
+F(38) = 39088169
+F(39) = 63245986
+F(40) = 102334155
+-----------------------------------
+[Trabalhador 2] Recebi sinal de parada. Finalizando.
+[Trabalhador 1] Recebi sinal de parada. Finalizando.
+
+=========================================================
+FIM DO JOB: sex 20 jun 2025 14:28:25 -03
+Tempo total de execução do script: 1 segundos.
+=========================================================

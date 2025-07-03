@@ -1,0 +1,12 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 14:43:52 -03
+ID do Job: 370
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Limite para Fibonacci: F(65)
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_370
+
+Compilando o código C com 'mpicc'...
+ERRO NA COMPILAÇÃO!

@@ -1,0 +1,27 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 14:45:34 -03
+ID do Job: 371
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Limite para Fibonacci: F(65)
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_371
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 3 nó(s)...
+[Trabalhador 1] Recebi tarefa F(65). Calculando...
+[Trabalhador 1] Recebi sinal de parada. Finalizando.
+
+===================================
+  Resultado Final: F(65) = 17167680177565
+===================================
+
+[Trabalhador 2] Recebi sinal de parada. Finalizando.
+
+=========================================================
+FIM DO JOB: sex 20 jun 2025 14:45:35 -03
+Tempo total de execução do script: 1 segundos.
+=========================================================
