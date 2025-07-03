@@ -15,14 +15,14 @@ Esta pasta contém os arquivos de configuração finalizados e prontos para sere
 
 * **Conteúdo**: Inclui os arquivos essenciais como `slurm.conf`, `slurmdbd.conf`, `cgroup.conf` e os scripts de gerenciamento de energia (`resume.sh`, `suspend.sh`).
 * **Uso**: Funciona como um conjunto de "modelos" universais para a configuração final do cluster. Estes arquivos devem ser utilizados independentemente do método de instalação escolhido (manual ou via script).
-* **Adaptação**: Contém um `README_Tecnico.txt` que serve como um guia detalhado para customizar os arquivos (ajustar IPs, nomes dos nós, senhas, etc.) para o seu ambiente específico.
+* **Adaptação**: Contém um `READme.md` que serve como um guia detalhado para customizar os arquivos (ajustar IPs, nomes dos nós, senhas, etc.) para o seu ambiente específico.
 
 ### 2. `Comandos/`
 Esta pasta oferece uma abordagem de instalação manual e detalhada.
 
 * **Conteúdo**: Cinco arquivos `.txt`, cada um contendo uma lista de comandos para uma etapa específica da instalação (ex: Ambiente Base, Munge, Slurm Mestre).
 * **Uso**: Ideal para quem deseja realizar uma instalação **manual e controlada**, executando e validando cada comando passo a passo. É uma excelente abordagem para fins de aprendizado ou para depurar problemas em etapas específicas do processo.
-* **Guia**: Inclui um `README.txt` que explica o objetivo de cada um dos cinco arquivos de comandos.
+* **Guia**: Inclui um `READme.md` que explica o objetivo de cada um dos cinco arquivos de comandos.
 
 ### 3. `Script/`
 Esta pasta oferece uma abordagem de instalação mais rápida e automatizada.
