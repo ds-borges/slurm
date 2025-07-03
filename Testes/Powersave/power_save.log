@@ -1,0 +1,460 @@
+2025-06-23 23:43:02 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-23 23:43:02 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+Node03
+2025-06-23 23:43:02 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-23 23:43:03 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-23 23:43:03 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-23 23:43:04 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-23 23:43:04 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-23 23:43:06 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-23 23:43:06 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 06:29:27 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 06:29:27 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-24 06:29:27 - [RESUME] - Processando nó: Node01
+2025-06-24 06:29:27 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 06:29:27 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 06:29:27 - [RESUME] - Processando nó: Node02
+2025-06-24 06:29:27 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 06:29:27 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 06:29:27 - [RESUME] - Processando nó: Node03
+2025-06-24 06:29:27 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 06:29:27 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 06:29:27 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 07:07:49 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 07:07:49 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 07:07:49 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 07:07:51 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 07:07:51 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 07:19:07 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 07:19:07 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 07:19:07 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 07:19:09 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 07:19:09 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 07:19:27 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 07:19:27 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 07:19:27 - [RESUME] - Processando nó: Node01
+2025-06-24 07:19:27 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 07:19:27 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 07:19:27 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 07:43:45 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 07:43:45 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 07:43:45 - [RESUME] - Processando nó: Node03
+2025-06-24 07:43:45 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 07:43:45 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 07:43:45 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 08:01:27 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 08:01:27 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 08:01:27 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 08:01:29 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 08:01:29 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 08:22:11 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 08:22:11 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 08:22:11 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 08:22:13 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 08:22:13 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 08:34:55 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 08:34:55 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 08:34:55 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 08:34:58 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 08:34:58 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 09:14:02 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 09:14:02 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-24 09:14:02 - [RESUME] - Processando nó: Node01
+2025-06-24 09:14:02 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 09:14:02 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 09:14:02 - [RESUME] - Processando nó: Node02
+2025-06-24 09:14:02 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 09:14:02 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 09:14:02 - [RESUME] - Processando nó: Node03
+2025-06-24 09:14:02 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 09:14:02 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 09:14:02 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 09:31:03 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 09:31:03 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 09:31:03 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 09:31:04 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 09:31:04 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 09:49:37 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 09:49:37 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 09:49:37 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 09:49:38 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 09:49:38 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 09:55:41 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-02]
+2025-06-24 09:55:41 - [RESUME] - Nós a serem reativados: Node01
+Node02
+2025-06-24 09:55:41 - [RESUME] - Processando nó: Node01
+2025-06-24 09:55:41 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 09:55:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 09:55:41 - [RESUME] - Processando nó: Node02
+2025-06-24 09:55:41 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 09:55:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 09:55:41 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 10:12:12 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 10:12:12 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 10:12:12 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 10:12:14 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 10:12:14 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 10:25:48 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 10:25:48 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 10:25:48 - [RESUME] - Processando nó: Node02
+2025-06-24 10:25:48 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 10:25:48 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 10:25:48 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 10:42:06 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 10:42:06 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 10:42:06 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 10:42:08 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 10:42:08 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 10:56:37 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 10:56:37 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 10:56:37 - [RESUME] - Processando nó: Node03
+2025-06-24 10:56:37 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 10:56:37 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 10:56:37 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 11:01:40 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 11:01:40 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 11:01:40 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 11:01:42 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 11:01:42 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 11:27:40 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 11:27:40 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 11:27:40 - [RESUME] - Processando nó: Node01
+2025-06-24 11:27:40 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 11:27:40 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 11:27:40 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 11:32:42 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 11:32:42 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 11:32:42 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 11:32:44 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 11:32:44 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 11:39:47 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 11:39:47 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 11:39:47 - [RESUME] - Processando nó: Node03
+2025-06-24 11:39:47 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 11:39:47 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 11:39:47 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 11:44:48 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 11:44:48 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 11:44:48 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 11:44:50 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 11:44:50 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 12:19:12 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[02-03]
+2025-06-24 12:19:12 - [SUSPEND] - Nós a serem suspensos: Node02
+Node03
+2025-06-24 12:19:12 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 12:19:14 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 12:19:14 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 12:19:16 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 12:19:16 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 13:49:41 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 13:49:41 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-24 13:49:41 - [RESUME] - Processando nó: Node01
+2025-06-24 13:49:41 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 13:49:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 13:49:41 - [RESUME] - Processando nó: Node02
+2025-06-24 13:49:41 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 13:49:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 13:49:41 - [RESUME] - Processando nó: Node03
+2025-06-24 13:49:41 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 13:49:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 13:49:41 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 14:50:05 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 14:50:05 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 14:50:05 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 14:50:07 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 14:50:07 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 15:41:38 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 15:41:38 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 15:41:38 - [RESUME] - Processando nó: Node02
+2025-06-24 15:41:38 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 15:41:38 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 15:41:38 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 15:47:13 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 15:47:13 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 15:47:13 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 15:47:15 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 15:47:15 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 16:24:03 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 16:24:03 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 16:24:03 - [RESUME] - Processando nó: Node01
+2025-06-24 16:24:03 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 16:24:03 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 16:24:03 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 17:23:52 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 17:23:52 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 17:23:52 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 17:23:53 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 17:23:53 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 18:12:55 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 18:12:55 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 18:12:55 - [RESUME] - Processando nó: Node02
+2025-06-24 18:12:55 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 18:12:55 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 18:12:55 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 18:15:38 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 18:15:38 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 18:15:38 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 18:15:39 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 18:15:39 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 19:01:01 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[02-03]
+2025-06-24 19:01:01 - [SUSPEND] - Nós a serem suspensos: Node02
+Node03
+2025-06-24 19:01:01 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 19:01:03 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 19:01:03 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 19:01:05 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 19:01:05 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 19:36:00 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 19:36:00 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 19:36:00 - [SUSPEND] - Tentando suspender o nó: Node03
+ssh: connect to host node03 port 22: No route to host
+2025-06-24 19:36:03 - [SUSPEND] - ERRO: Falha ao executar o comando de suspensão no nó Node03. Verifique a conectividade e as permissões do sudo.
+2025-06-24 19:58:49 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 19:58:49 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 19:58:49 - [RESUME] - Processando nó: Node01
+2025-06-24 19:58:49 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 19:58:49 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 19:58:49 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 19:58:51 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 19:58:51 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 19:58:51 - [RESUME] - Processando nó: Node02
+2025-06-24 19:58:51 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 19:58:51 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 19:58:51 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 19:58:56 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 19:58:56 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 19:58:56 - [RESUME] - Processando nó: Node03
+2025-06-24 19:58:56 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 19:58:56 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 19:58:56 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 20:21:27 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 20:21:27 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+Node03
+2025-06-24 20:21:27 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 20:21:29 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 20:21:29 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 20:21:30 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 20:21:30 - [SUSPEND] - Tentando suspender o nó: Node03
+ssh: connect to host node03 port 22: No route to host
+2025-06-24 20:21:33 - [SUSPEND] - ERRO: Falha ao executar o comando de suspensão no nó Node03. Verifique a conectividade e as permissões do sudo.
+2025-06-24 21:18:27 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 21:18:27 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 21:18:27 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 21:18:28 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 21:18:28 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:18:31 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 21:18:31 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 21:18:31 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 21:18:32 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 21:18:32 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:18:39 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 21:18:39 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 21:18:39 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 21:18:40 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 21:18:40 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:19:36 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 21:19:36 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 21:19:36 - [RESUME] - Processando nó: Node01
+2025-06-24 21:19:36 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 21:19:36 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 21:19:36 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:19:38 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 21:19:38 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 21:19:38 - [RESUME] - Processando nó: Node02
+2025-06-24 21:19:38 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 21:19:38 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 21:19:38 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:19:40 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 21:19:40 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 21:19:40 - [RESUME] - Processando nó: Node03
+2025-06-24 21:19:41 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 21:19:41 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 21:19:41 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:20:08 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 21:20:08 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 21:20:08 - [RESUME] - Processando nó: Node01
+2025-06-24 21:20:08 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp2s0.
+2025-06-24 21:20:08 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 21:20:08 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:22:54 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 21:22:54 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-24 21:22:54 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 21:22:56 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 21:22:56 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:23:22 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 21:23:22 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-24 21:23:22 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 21:23:23 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 21:23:23 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:23:26 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 21:23:26 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 21:23:26 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 21:23:27 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 21:23:27 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:23:39 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-24 21:23:39 - [RESUME] - Nós a serem reativados: Node01
+2025-06-24 21:23:39 - [RESUME] - Processando nó: Node01
+2025-06-24 21:23:39 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:23:39 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 21:23:39 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:23:42 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-24 21:23:42 - [RESUME] - Nós a serem reativados: Node02
+2025-06-24 21:23:42 - [RESUME] - Processando nó: Node02
+2025-06-24 21:23:42 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:23:42 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 21:23:42 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:23:44 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 21:23:44 - [RESUME] - Nós a serem reativados: Node03
+2025-06-24 21:23:44 - [RESUME] - Processando nó: Node03
+2025-06-24 21:23:44 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:23:44 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 21:23:44 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:30:06 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-02]
+2025-06-24 21:30:07 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+2025-06-24 21:30:07 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 21:30:08 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node03
+2025-06-24 21:30:08 - [SUSPEND] - Nós a serem suspensos: Node03
+2025-06-24 21:30:08 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 21:30:08 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 21:30:08 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 21:30:10 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 21:30:10 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:30:10 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 21:30:10 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:41:00 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 21:41:00 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-24 21:41:00 - [RESUME] - Processando nó: Node01
+2025-06-24 21:41:00 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:41:00 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 21:41:00 - [RESUME] - Processando nó: Node02
+2025-06-24 21:41:00 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:41:00 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 21:41:00 - [RESUME] - Processando nó: Node03
+2025-06-24 21:41:00 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:41:00 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 21:41:00 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 21:47:32 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 21:47:32 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+Node03
+2025-06-24 21:47:32 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 21:47:33 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 21:47:33 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 21:47:35 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 21:47:35 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-24 21:47:38 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-24 21:47:38 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-24 21:53:26 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-24 21:53:26 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-24 21:53:26 - [RESUME] - Processando nó: Node01
+2025-06-24 21:53:26 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:53:26 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-24 21:53:26 - [RESUME] - Processando nó: Node02
+2025-06-24 21:53:26 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:53:26 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-24 21:53:26 - [RESUME] - Processando nó: Node03
+2025-06-24 21:53:26 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-24 21:53:26 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-24 21:53:26 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-24 23:53:24 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-02]
+2025-06-24 23:53:24 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+2025-06-24 23:53:24 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-24 23:53:26 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-24 23:53:26 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-24 23:53:27 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-24 23:53:27 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 00:05:36 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-02]
+2025-06-25 00:05:37 - [RESUME] - Nós a serem reativados: Node01
+Node02
+2025-06-25 00:05:37 - [RESUME] - Processando nó: Node01
+2025-06-25 00:05:37 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 00:05:37 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-25 00:05:37 - [RESUME] - Processando nó: Node02
+2025-06-25 00:05:37 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 00:05:37 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-25 00:05:37 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-25 00:52:12 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-25 00:52:12 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-25 00:52:12 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-25 00:52:13 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-25 00:52:13 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 01:04:10 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-25 01:04:10 - [RESUME] - Nós a serem reativados: Node02
+2025-06-25 01:04:10 - [RESUME] - Processando nó: Node02
+2025-06-25 01:04:10 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 01:04:10 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-25 01:04:10 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-25 01:07:52 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node01
+2025-06-25 01:07:52 - [SUSPEND] - Nós a serem suspensos: Node01
+2025-06-25 01:07:52 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-25 01:07:53 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-25 01:07:53 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 01:23:05 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[02-03]
+2025-06-25 01:23:05 - [SUSPEND] - Nós a serem suspensos: Node02
+Node03
+2025-06-25 01:23:05 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-25 01:23:06 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-25 01:23:06 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-25 01:23:08 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-25 01:23:08 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 09:50:42 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node[01-03]
+2025-06-25 09:50:42 - [RESUME] - Nós a serem reativados: Node01
+Node02
+Node03
+2025-06-25 09:50:42 - [RESUME] - Processando nó: Node01
+2025-06-25 09:50:42 - [RESUME] - MAC encontrado para Node01: 6c:f0:49:f0:f3:da. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 09:50:42 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node01.
+2025-06-25 09:50:42 - [RESUME] - Processando nó: Node02
+2025-06-25 09:50:42 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 09:50:42 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-25 09:50:42 - [RESUME] - Processando nó: Node03
+2025-06-25 09:50:42 - [RESUME] - MAC encontrado para Node03: 64:66:b3:02:8b:f9. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 09:50:42 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node03.
+2025-06-25 09:50:42 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-25 10:14:13 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-25 10:14:13 - [SUSPEND] - Nós a serem suspensos: Node02
+2025-06-25 10:14:13 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-25 10:14:15 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-25 10:14:15 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 10:27:23 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-25 10:27:23 - [RESUME] - Nós a serem reativados: Node02
+2025-06-25 10:27:23 - [RESUME] - Processando nó: Node02
+2025-06-25 10:27:23 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 10:27:23 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-25 10:27:23 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-25 11:04:17 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[01-02]
+2025-06-25 11:04:17 - [SUSPEND] - Nós a serem suspensos: Node01
+Node02
+2025-06-25 11:04:17 - [SUSPEND] - Tentando suspender o nó: Node01
+2025-06-25 11:04:19 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node01.
+2025-06-25 11:04:19 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-25 11:04:21 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-25 11:04:21 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
+2025-06-25 11:16:52 - [RESUME] - Iniciando execução. Argumento recebido do Slurm: Node02
+2025-06-25 11:16:52 - [RESUME] - Nós a serem reativados: Node02
+2025-06-25 11:16:52 - [RESUME] - Processando nó: Node02
+2025-06-25 11:16:52 - [RESUME] - MAC encontrado para Node02: 6c:f0:49:f0:f3:de. Tentando enviar Wake-on-LAN via interface enp0s25.
+2025-06-25 11:16:52 - [RESUME] - Sucesso: Pacote Wake-on-LAN enviado para o nó Node02.
+2025-06-25 11:16:52 - [RESUME] - Finalizado com sucesso. Pacotes de reativação enviados para todos os nós solicitados.
+2025-06-25 11:36:35 - [SUSPEND] - Iniciando execução. Argumento recebido do Slurm: Node[02-03]
+2025-06-25 11:36:35 - [SUSPEND] - Nós a serem suspensos: Node02
+Node03
+2025-06-25 11:36:35 - [SUSPEND] - Tentando suspender o nó: Node02
+2025-06-25 11:36:37 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node02.
+2025-06-25 11:36:37 - [SUSPEND] - Tentando suspender o nó: Node03
+2025-06-25 11:36:39 - [SUSPEND] - Sucesso: Comando de suspensão enviado para o nó Node03.
+2025-06-25 11:36:39 - [SUSPEND] - Finalizado com sucesso. Todos os nós solicitados foram suspensos.
