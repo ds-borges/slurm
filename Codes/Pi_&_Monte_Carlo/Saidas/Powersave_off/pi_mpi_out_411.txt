@@ -1,0 +1,14 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 20:15:25 -03
+ID do Job: 411
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Total de Tiros para Monte Carlo: 120000000000
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_411
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 3 nó(s)...

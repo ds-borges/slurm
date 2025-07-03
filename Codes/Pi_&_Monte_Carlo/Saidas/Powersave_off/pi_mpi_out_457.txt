@@ -1,0 +1,28 @@
+=========================================================
+INÍCIO DO JOB: sáb 21 jun 2025 17:24:29 -03
+ID do Job: 457
+Nós solicitados: 1 | Processos Totais: 1
+Nós utilizados: Node01
+Número Total de Tiros para Monte Carlo: 9600000000
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_457
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 1 nó(s)...
+====================================================
+Cálculo de Pi com MPI e Método de Monte Carlo
+----------------------------------------------------
+Número de processos MPI...: 1
+Total de tiros............: 9600000000
+Total de acertos..........: 7539846514
+Tempo de execução do cálculo: 992.771823 segundos
+Valor estimado de Pi......: 3.141602714166666
+====================================================
+
+=========================================================
+FIM DO JOB: sáb 21 jun 2025 17:41:02 -03
+Tempo total de execução do script: 993 segundos.
+=========================================================
