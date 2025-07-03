@@ -18,7 +18,7 @@ Esta pasta contém tudo o que você precisa para construir um cluster Slurm func
 * **`/Comandos`**: Oferece um guia para a **instalação manual** do cluster. É a abordagem ideal para quem deseja aprender cada etapa do processo e ter controle total.
 * **`/Script`**: Oferece scripts para uma **instalação semi-automática**. Esta abordagem é mais rápida e reduz a chance de erros, mas ainda exige a intervenção do administrador em pontos-chave.
 
-### 2. `/Testes`
+### 2. `/Tests`
 Após a instalação bem-sucedida do cluster, esta pasta oferece os recursos para validar seu funcionamento.
 
 * **Objetivo**: Verificar se o cluster está operacional, se os jobs são submetidos corretamente e se o ambiente de computação paralela (MPI) está funcionando como esperado.
@@ -31,5 +31,5 @@ Siga este fluxo de trabalho para obter os melhores resultados:
 
 1.  **Comece pela Instalação**: Navegue até a pasta `/Instalation` para iniciar a construção do seu cluster.
 2.  **Escolha seu Método**: Decida entre a abordagem manual (`/Comandos`) ou a semi-automática (`/Script`) e siga as instruções do `README.md` correspondente.
-3.  **Valide o Cluster**: Uma vez que o cluster esteja online e os serviços do Slurm estejam rodando, vá para a pasta `/Testes`.
+3.  **Valide o Cluster**: Uma vez que o cluster esteja online e os serviços do Slurm estejam rodando, vá para a pasta `/Tests`.
 4.  **Execute o Teste**: Siga as instruções para executar o programa de cálculo de Pi. Um resultado bem-sucedido confirma que seu cluster está pronto para processar trabalhos de alto desempenho.
