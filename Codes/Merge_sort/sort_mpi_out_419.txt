@@ -1,0 +1,27 @@
+=========================================================
+INÍCIO DO JOB: sex 20 jun 2025 21:14:35 -03
+ID do Job: 419
+Nós solicitados: 3 | Processos Totais: 3
+Nós utilizados: Node[01-03]
+Número Total de Elementos para Ordenar: 30000000
+=========================================================
+
+Executando no diretório de trabalho: /nfs/return/job/job_419
+
+Compilando o código C com 'mpicc'...
+Compilação concluída.
+
+Executando o programa com mpirun em 3 nó(s)...
+====================================================
+Ordenação com Parallel Merge Sort e MPI
+----------------------------------------------------
+Número de processos MPI...: 3
+Total de elementos........: 30000000
+Tempo de execução.........: 15.430619 segundos
+Verificação de sucesso....: O array foi ordenado corretamente.
+====================================================
+
+=========================================================
+FIM DO JOB: sex 20 jun 2025 21:14:53 -03
+Tempo total de execução do script: 18 segundos.
+=========================================================
