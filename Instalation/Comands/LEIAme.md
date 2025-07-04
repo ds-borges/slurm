@@ -21,23 +21,23 @@ A instalação segue uma ordem lógica e progressiva.  É crucial seguir a sequ�
 
 Aqui está a descrição de cada arquivo e onde seus comandos devem ser executados. 
 
-### `1-Comandos_Configurar_Ambiente_Base.txt`
+### `1-Commands_Configure_Base_Environment`
 * **Objetivo**: Configurar os pré-requisitos essenciais para o funcionamento do cluster.
 * **Onde Executar**: Em **TODOS** os nós (Mestre e Computação).  O arquivo possui seções que se aplicam apenas ao mestre ou aos nós de computação, conforme indicado. 
 
-### `2-Comandos_para_Instalar_Munge.txt`
+### `2-Commands_to_Install_Munge.txt`
 * **Objetivo**: Instalar e configurar o serviço de autenticação Munge. 
 * **Onde Executar**: Em **TODOS** os nós. 
 
-### `3-Comandos_para_Instalar_Slurm_(Nó Mestre).txt`
+### `3-Commands_to_Install_Slurm_(Master_Node).txt`
 * **Objetivo**: Instalar os componentes centrais ("cérebro") do cluster Slurm. 
 * **Onde Executar**: Apenas no **NÓ MESTRE**. 
 
-### `4-Comandos_para_Instalar_o_Slurm_(Nós_de_Computação).txt`
+### `4-Commands_to_Install_Slurm_(Compute_Nodes).txt`
 * **Objetivo**: Instalar o serviço "trabalhador" do Slurm (`slurmd`). 
 * **Onde Executar**: Apenas nos **NÓS DE COMPUTAÇÃO**. 
 
-### `5-Comandos_para_Compilar_OpenMPI.txt`
+### `5-Commands_to_Compile_OpenMPI.txt`
 * **Objetivo**: Preparar o ambiente para a execução de trabalhos paralelos de alto desempenho. 
 * **Onde Executar**: Em **TODOS** os nós. 
 
@@ -45,17 +45,17 @@ Aqui está a descrição de cada arquivo e onde seus comandos devem ser executad
 
 Antes de executar os comandos, revise e altere os seguintes valores para que correspondam ao seu ambiente.
 
-### Passo 1: `1-Comandos_Configurar_Ambiente_Base.txt` 
+### Passo 1: `1-Commands_Configure_Base_Environment` 
 * **Mapeamento de Rede**: Altere a lista de IPs e Nomes de Nós na seção de configuração do arquivo `/etc/hosts`. 
 * **Configuração do NFS**:
     * Altere a faixa de rede (ex: `192.168.1.0/24`) no comando de configuração do `/etc/exports`. 
     * Altere o IP do nó Mestre no comando `sudo mount ...`. 
 * **Configuração do SSH**: Altere a lista de comandos `ssh-copy-id` para incluir os nomes de usuário e de nós corretos para o seu cluster. 
 
-### Passo 2: `2-Comandos_para_Instalar_Munge.txt` 
+### Passo 2: `2-Commands_to_Install_Munge.txt` 
 * **(Opcional) IDs de Usuário**: Os IDs para os usuários `munge` e `slurm` estão fixos como `1001` e `1002`.  Pode ser necessário alterar esses valores se eles já estiverem em uso no seu sistema. 
 
-### Passo 3: `3-Comandos_para_Instalar_Slurm_(Nó Mestre).txt` 
+### Passo 3: `3-Commands_to_Install_Slurm_(Master_Node).txt` 
 Este passo envolve a edição de vários arquivos de configuração.
 
 * **No arquivo `slurmdbd.conf`:**
@@ -74,5 +74,5 @@ Este passo envolve a edição de vários arquivos de configuração.
         1.  No **Nó Mestre**, `slurm` possa executar `/usr/sbin/etherwake`. 
         2.  Em **TODOS os Nós de Computação**, `slurm` possa executar `/sbin/poweroff`. 
 
-### Passo 5: `5-Comandos_para_Compilar_OpenMPI.txt` 
+### Passo 5: `5-Commands_to_Compile_OpenMPI.txt` 
 * **Versão do Open MPI**: A versão `4.1.5` está fixa nos comandos `wget`, `cd` e `configure`.  Se você precisar de outra versão, deverá alterar o número em cada um desses comandos. 

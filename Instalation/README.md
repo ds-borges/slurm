@@ -41,6 +41,6 @@ This folder offers a faster, more automated installation approach.
 
 ## 🚀 Getting Started
 
-1.  **Configure the Base Files**: First of all, go to the `Arquivos do Slurm/` folder. Read the `READme.md` and edit the configuration files (`.conf`) to match your cluster's hardware and network.
+1.  **Configure the Base Files**: First of all, go to the `Slurm files/` folder. Read the `READme.md` and edit the configuration files (`.conf`) to match your cluster's hardware and network.
 2.  **Choose Your Method**: Decide whether you prefer the manual (`Commands/`) or semi-automatic (`Script/`) installation.
 3.  **Follow the Instructions**:  Navigate to the chosen folder and follow the instructions in the local `README.md` to begin the installation.
