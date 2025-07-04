@@ -1,119 +1,119 @@
-# Cálculo de Pi com MPI e Slurm
+# Calculating Pi with MPI and Slurm
 
-![Linguagem](https://img.shields.io/badge/Linguagem-C-blue.svg)
-![Paralelismo](https://img.shields.io/badge/Framework-MPI-orange.svg)
+![Language](https://img.shields.io/badge/Linguagem-C-blue.svg)
+![Parallelis](https://img.shields.io/badge/Framework-MPI-orange.svg)
 ![Cluster](https://img.shields.io/badge/Gerenciador-Slurm-red.svg)
 
-Este projeto oferece uma implementação em C e MPI para calcular o valor de Pi (π) através do método estatístico de Monte Carlo. O sistema é projetado para ser executado de forma eficiente em clusters de computação de alto desempenho (HPC) gerenciados pelo Slurm Workload Manager.
+This project provides an implementation in C and MPI to calculate the value of Pi (π) using the Monte Carlo statistical method. The system is designed to be executed efficiently on high-performance computing (HPC) clusters managed by the Slurm Workload Manager.
 
-## 🎯 Conceitos Chave
+## 🎯 Key Concepts
 
-### Método de Monte Carlo para Pi
-A ideia é simular o lançamento aleatório de "dardos" em um quadrado de lado 2, que contém um círculo de raio 1 inscrito nele. A área do quadrado é $2^2 = 4$, e a área do círculo é $\pi \cdot 1^2 = \pi$.
+### Monte Carlo Method for Pi
+The idea is to simulate randomly throwing "darts" at a square with a side length of 2, which has a circle of radius 1 inscribed within it. The area of the square is $2^2 = 4$,  and the area of the circle is $\pi \cdot 1^2 = \pi$.
 
-A razão entre a área do círculo e a área do quadrado é $\frac{\pi}{4}$. Portanto, se lançarmos um número muito grande de dardos, a proporção de dardos que caem dentro do círculo em relação ao total de dardos lançados será uma aproximação de $\frac{\pi}{4}$.
+The ratio between the area of the circle and the area of the square is $\frac{\pi}{4}$. Therefore, if we throw a very large number of darts, the proportion of darts that land inside the circle relative to the total number of darts thrown will be an approximation of $\frac{\pi}{4}$.
 
-$$\pi \approx 4 \cdot \frac{\text{acertos dentro do círculo}}{\text{total de dardos lançados}}$$
+$$\pi \approx 4 \cdot \frac{\text{hits inside the circle}}{\text{total darts thrown}}$$
 
-### Paralelismo com MPI (Message Passing Interface)
-Para tornar o cálculo viável com bilhões de "dardos", o trabalho é dividido entre múltiplos processos. O MPI é um padrão de comunicação que permite que esses processos, executando em diferentes nós de um cluster, troquem dados. Neste projeto, o trabalho é dividido, cada processo calcula uma parte, e os resultados são somados no final (`MPI_Reduce`).
+### Parallelism with MPI (Message Passing Interface)
+To make the calculation feasible with billions of "darts," the work is divided among multiple processes. MPI is a communication standard that allows these processes, running on different nodes of a cluster, to exchange data. In this project, the work is divided, each process calculates a part, and the results are summed at the end (`MPI_Reduce`).
 
-## 📂 Descrição dos Arquivos
+## 📂 File Descriptions
 
 ### 📄 `monte_carlo_mpi.c`
-O núcleo da lógica de cálculo, escrito em C.
+The core of the calculation logic, written in C.
 
-* **Inicialização MPI**: Configura o ambiente para comunicação entre processos.
-* **Divisão de Carga**: O número total de "tiros" é dividido igualmente entre todos os processos alocados (`total_tiros / num_procs`).
-* **Cálculo Independente**: Cada processo executa sua própria simulação de Monte Carlo.
-* **Sementes Aleatórias Distintas**: Garante a independência estatística dos resultados usando o `rank` do processo para gerar uma semente única para a função `srand()`.
-* **Agregação de Resultados**: Utiliza `MPI_Reduce` para somar os acertos de todos os processos e consolidar o resultado no processo mestre (rank 0).
-* **Saída Formatada**: Apenas o processo mestre imprime o resultado final, evitando saídas duplicadas.
+* **MPI Initialization**: Sets up the environment for communication between processes.
+* **Load Division**: The total number of "shots" is divided equally among all allocated processes (`total_shots / num_procs`).
+* **Independent Calculation**: Each process runs its own Monte Carlo simulation
+* **SDistinct Random Seeds**: Ensures the statistical independence of the results by using the process `rank`  to generate a unique seed for the `srand()`.
+* **Result Aggregation**: Uses `MPI_Reduce` to sum the hits from all processes and consolidate the result on the master process (rank 0).
+* **Formatted Output**: Only the master process prints the final result, avoiding duplicate outputs.
 
 ### 📜 `pi_mpi_flexivel.sh`
-Um script de submissão para o Slurm que automatiza a execução no cluster.
+A submission script for Slurm that automates the execution on the cluster.
 
-* **Diretivas Slurm**: As linhas `#SBATCH` configuram o job, definindo nome, arquivos de log, tempo de execução e, mais importante, o número de tarefas por nó (`--ntasks-per-node=1`).
-* **Flexibilidade**: Permite que o usuário defina o número de nós na linha de comando (`sbatch --nodes=...`).
-* **Automação do Fluxo de Trabalho**:
-    1.  Cria um diretório de trabalho seguro e isolado para cada job.
-    2.  Copia o código-fonte para o diretório de trabalho.
-    3.  Compila o código C usando `mpicc` com o flag de otimização `-O3`.
-    4.  Executa o programa compilado com `mpirun`, que se integra perfeitamente ao Slurm para distribuir os processos pelos nós alocados.
-    5.  Mede e reporta o tempo total de execução.
+* **Slurm Directives**: The `#SBATCH` lines configure the job, defining the name, log files, execution time, and most importantly, the number of tasks per node (`--ntasks-per-node=1`).
+* **Flexibility**: Allows the user to define the number of nodes on the command line (`sbatch --nodes=...`).
+* **Workflow Automation:**:
+    1.  Creates a secure and isolated working directory for each job.
+    2.  Copies the source code to the working directory.
+    3.  Compiles the C code using `mpicc` with the `-O3` optimization flag..
+    4.  Executes the compiled program with `mpirun`, qwhich integrates seamlessly with Slurm to distribute the processes across the allocated nodes.
+    5.  Measures and reports the total execution time.
 
-## 🚀 Como Usar (em um Cluster com Slurm)
+## 🚀 How to Use (on a Slurm Cluster)
 
-### 1. Pré-requisitos
-O script `pi_mpi_flexivel.sh` espera encontrar o código-fonte C em um local específico. Garanta que o arquivo esteja no caminho correto ou ajuste o script:
+### 1.  Prerequisites
+The `pi_mpi_flexivel.sh` script expects to find the C source code in a specific location. Ensure the file is in the correct path or adjust the script:
 ```bash
-# Caminho definido no script pi_mpi_flexivel.sh
+# Path defined in the pi_mpi_flexivel.sh script
 SOURCE_FILE="/nfs/execution/monte_carlo_mpi.c"
 ```
 
-### 2. Submissão do Job
-Use o comando `sbatch` para enviar o script para a fila do Slurm. Você deve especificar:
--   `--nodes`: O número de nós de computação que deseja usar.
--   `<numero_total_de_tiros>`: O argumento para o script, que representa a carga de trabalho total.
+### 2. Job Submission
+Use the `sbatch` command to send the script to the Slurm queue. You must specify:
+-   `--nodes`: The number of compute nodes you want to use.
+-   `<total_number_of_shots>`: The argument for the script, which represents the total workload.
 
-**Sintaxe:**
+**Syntax:**
 ```bash
-sbatch --nodes=<numero_de_nos> pi_mpi_flexivel.sh <numero_total_de_tiros>
+sbatch --nodes=<number_of_nodes> pi_mpi_flexivel.sh <total_number_of_shots>
 ```
 
-**Exemplo Prático:**
-Para executar o cálculo em **16 nós** com **100 bilhões de tiros**:
+**Practical Example:**
+To run the calculation on 16 nodes with 100 billion shots:
 ```bash
 sbatch --nodes=16 pi_mpi_flexivel.sh 100000000000
 ```
-**Atenção:** O número total de tiros deve ser divisível pelo número de nós.
+**Attention**: The total number of shots must be divisible by the number of nodes.
 
-### 3. Análise dos Resultados
-Os logs de saída e erro serão gerados nos diretórios `/nfs/return/out/` e `/nfs/return/err/`, respectivamente, com o ID do Job no nome do arquivo.
+### 3. Analyzing the Results
+The output and error logs will be generated in the `/nfs/return/out/` and `/nfs/return/err/` directories, respectively, with the Job ID in the filename.
 
-## 💡 Recomendação de Carga de Trabalho
+## 💡 Workload Recommendation
 
-Para resultados com maior precisão e para realmente testar a capacidade do cluster, é recomendado usar um número de "tiros" (tentativas) muito alto.
+For results with higher precision and to truly test the cluster's capacity, it is recommended to use a very high number of "shots" (attempts).
 
-> **Recomenda-se iniciar os testes com valores acima de 9 bilhões de tiros.**
+> **It is recommended to start tests with values above 9 billion shots for really tests.**
 
-Quanto maior o número de tiros, mais o resultado se aproximará do valor real de π, e mais evidente será o benefício da computação paralela na redução do tempo de execução.
+The higher the number of shots, the closer the result will be to the actual value of π, and the more evident the benefit of parallel computing in reducing execution time will be.
 
-## 💻 Como Executar Localmente (Sem Slurm)
+## 💻 How to Run Locally (Without Slurm)
 
-Se você tiver uma implementação do MPI (como Open MPI ou MPICH) instalada em sua máquina local, pode compilar e executar o programa diretamente.
+If you have an MPI implementation (like Open MPI or MPICH) installed on your local machine, you can compile and run the program directly.
 
-### 1. Compilação
-Use o `mpicc`, que é um wrapper para o seu compilador C (como o GCC), para compilar o programa.
+### 1. Compilation
+Use `mpicc`, which is a wrapper for your C compiler (like GCC), to compile the program.
 ```bash
 mpicc monte_carlo_mpi.c -o pi_exec_monte_carlo -O3 -lm
 ```
 
-### 2. Execução
-Use `mpirun` ou `mpiexec` para executar o programa compilado.
--   Use o flag `-np` para especificar o número de processos que deseja simular.
+### 2. Execution
+Use `mpirun` or `mpiexec` to run the compiled program.
+-   Use the `-np` flag to specify the number of processes you want to simulate.
 
-**Sintaxe:**
+**Syntax:**
 ```bash
-mpirun -np <numero_de_processos> ./pi_exec_monte_carlo <numero_total_de_tiros>
+mpirun -np <number_of_processes> ./pi_exec_monte_carlo <total_number_of_shots>
 ```
 
-**Exemplo Prático:**
-Para executar com **4 processos** e **1 bilhão de tiros**:
+**Practical Example:**
+To run with **4 processes** and **1 billion shots**:
 ```bash
 mpirun -np 4 ./pi_exec_monte_carlo 1000000000
 ```
 
-## 📊 Exemplo de Saída
-A saída do programa, que será encontrada no arquivo de log do Slurm, terá o seguinte formato:
+## 📊 Output Example
+The program's output, which will be found in the Slurm log file, will have the following format:
 ```
 ====================================================
-Cálculo de Pi com MPI e Método de Monte Carlo
+Calculation of Pi with MPI and Monte Carlo Method
 ----------------------------------------------------
-Número de processos MPI...: 16
-Total de tiros............: 100000000000
-Total de acertos..........: 78539815000
-Tempo de execução do cálculo: 152.731982 segundos
-Valor estimado de Pi......: 3.141592600000000
+Number of MPI processes...: 16
+Total shots............: 100000000000
+Total hits..........: 78539815000
+Calculation execution time: 152.731982 segundos
+Estimated value of Pi......: 3.141592600000000
 ====================================================
 ```
