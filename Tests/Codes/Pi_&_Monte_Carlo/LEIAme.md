@@ -104,8 +104,8 @@ Para executar com **4 processos** e **1 bilhão de tiros**:
 mpirun -np 4 ./pi_exec_monte_carlo 1000000000
 ```
 
-## 📊 Output Example
-The program's output, which will be found in the Slurm log file, will have the following format:
+## 📊 Exemplo de Saída
+A saída do programa, que será encontrada no arquivo de log do Slurm, terá o seguinte formato:
 ```
 ====================================================
 Calculation of Pi with MPI and Monte Carlo Method
