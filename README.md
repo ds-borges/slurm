@@ -14,7 +14,7 @@ The content is organized into two main folders for ease of use:
 ### 1. `/Instalation`
 This folder contains everything you need to build a functional Slurm cluster from scratch. Inside, you will find three different approaches, each with its own detailed documentation:
 
-* **`/Slurm Files`**: Contains the finalized configuration files (`slurm.conf`, `cgroup.conf`, `slurmdbd.conf`, etc.).  They serve as templates that must be customized for your environment before installation. Refer to the technical `README.md` inside this folder for a customization guide.
+* **`/Slurm Files`**: Contains the finalized configuration files (`slurm.conf`, `cgroup.conf`, `slurmdbd.conf`, etc.).  They serve as templates that must be customized for your environment before installation. See the `README.md` inside this folder for a customization guide.
 * **`/Commands`**: Offers a guide for the manual installation of the cluster. It is the ideal approach for those who want to learn each step of the process and have full control.
 * **`/Script`**: Provides scripts for a semi-automatic installation. This approach is faster and reduces the chance of errors, but still requires administrator intervention at key points.
 

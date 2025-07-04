@@ -1,60 +1,60 @@
-# Guia Técnico: Customização de Ambiente Slurm
+# Technical Guide: Customizing a Slurm Environment
 
-![Gerenciador](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
-![Banco de Dados](https://img.shields.io/badge/Banco_de_Dados-MySQL_/_MariaDB-orange.svg)
-![Linguagem](https://img.shields.io/badge/Scripts-Bash-yellow.svg)
-![Tecnologia](https://img.shields.io/badge/Tecnologia-cgroups-lightgrey.svg)
-![Tecnologia](https://img.shields.io/badge/Tecnologia-Wake--on--LAN-informational.svg)
+![Manager](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
+![Database](https://img.shields.io/badge/Banco_de_Dados-MySQL_/_MariaDB-orange.svg)
+![Language](https://img.shields.io/badge/Scripts-Bash-yellow.svg)
+![Technology](https://img.shields.io/badge/Tecnologia-cgroups-lightgrey.svg)
+![Technology](https://img.shields.io/badge/Tecnologia-Wake--on--LAN-informational.svg)
 
-Este documento é uma referência técnica para adaptar os arquivos de configuração do Slurm a um novo ambiente de hardware. A configuração fornecida é totalmente funcional e inclui recursos avançados, como gerenciamento de energia (suspender/reativar nós ociosos) e controle estrito de recursos com cgroups.
+This document is a technical reference for adapting Slurm's configuration files to a new hardware environment. The provided configuration is fully functional and includes advanced features such as power management (suspending/resuming idle nodes) and strict resource control with cgroups.
 
-## 📄 Descrição dos Arquivos de Configuração
+## 📄 Description of Configuration Files
 
 * `slurm.conf`
-    * É o arquivo de configuração principal do Slurm. Ele define o nome do cluster, o nó controlador (mestre), as especificações de hardware de cada nó de computação (CPUs, memória), as partições de trabalho e os parâmetros para o recurso de economia de energia.
+    * This is the main configuration file for Slurm. It defines the cluster name, the controller (master) node, the hardware specifications for each compute node (CPUs, memory), the job partitions, and the parameters for the power-saving feature.
 
 * `slurmdbd.conf`
-    * Configura o daemon do banco de dados do Slurm (SlurmDBD). Este arquivo gerencia a conexão com o banco de dados (MySQL/MariaDB), onde o histórico de jobs e a contabilidade do cluster são armazenados.
+    * Configures the Slurm Database Daemon (SlurmDBD). This file manages the connection to the database (MySQL/MariaDB), where the job history and cluster accounting are stored.
 
 * `cgroup.conf`
-    * Define como o Slurm utilizará os Control Groups (cgroups) do kernel Linux.  Nesta configuração, ele é usado para restringir o uso de núcleos de CPU e memória RAM, garantindo que os jobs não consumam mais recursos do que o alocado.
+    * Defines how Slurm will use the Linux kernel's Control Groups (cgroups). In this configuration, it is used to constrain the use of CPU cores and RAM, ensuring that jobs do not consume more resources than allocated
 
 * `suspend.sh` e `resume.sh`
-    * Scripts customizados que gerenciam o ciclo de energia dos nós. 
-    * **`suspend.sh`**: Executado pelo Slurm para desligar um nó ocioso através do comando `poweroff`.
-    * **`resume.sh`**: Executado para "acordar" um nó desligado, enviando um pacote mágico Wake-on-LAN.
+    * Custom scripts that manage the power cycle of the nodes. 
+    * **`suspend.sh`**: Executed by Slurm to shut down an idle node via the `poweroff` command.
+    * **`resume.sh`**: Executed to `wake up` a powered-off node by sending a Wake-on-LAN magic packet.
 
 * `mac_addresses.list`
-    * Um arquivo auxiliar usado pelo script `resume.sh`. Ele mapeia os hostnames dos nós aos seus respectivos endereços MAC, que são essenciais para o funcionamento do Wake-on-LAN.
+    * A helper file used by the `resume.sh` script. It maps the hostnames of the nodes to their respective MAC addresses, which are essential for Wake-on-LAN to function.
 
-## ⚠️ Guia de Alterações Obrigatórias
+## ⚠️ Guide to Mandatory Changes
 
-Para que esta configuração funcione em um novo ambiente, as seguintes alterações são **críticas**.
+For this configuration to work in a new environment, the following changes are **critical**.
 
-### 1. No arquivo `slurm.conf`:
-* `SlurmctldHost`: Altere o nome do host e o IP para os do seu novo nó Mestre. 
-Exemplo: `SlurmctldHost=MeuNovoMaster(192.168.1.100)`. 
-* `AccountingStorageHost`: Altere para o nome do host do seu novo nó Mestre. 
-* `NodeName`: **Esta é a alteração mais importante.** Remova as definições existentes e adicione uma nova linha para CADA um dos seus nós de computação, garantindo que `NodeAddr`, `CPUs` e `RealMemory` correspondam ao hardware de cada um.
-* `PartitionName`: Após redefinir os nós, atualize a lista `Nodes=` em cada partição para incluir os nomes dos seus novos nós.
+### 1. In the `slurm.conf` file:
+* `SlurmctldHost`:  Change the hostname and IP to those of your new Master node. Example: `SlurmctldHost=MyNewMaster(192.168.1.100)`. 
+* `AccountingStorageHost`: Change this to the hostname of your new Master node.
+* `NodeName`: **This is the most critical change.** Remove the existing definitions and add a new line for EACH of your compute nodes, ensuring that `NodeAddr`, `CPUs` and `RealMemory` match the hardware of each one.
+* `PartitionName`: After redefining the nodes, update the `Nodes=` list in each partition to include the names of your new nodes.
 
-### 2. No arquivo `slurmdbd.conf`:
-* `DbdHost` e `StorageHost`: Altere para o nome do host do seu novo nó Mestre.
-* `StoragePass`: Altere a senha `bccufj07` para a senha que você definiu para o usuário `slurm` no seu banco de dados MariaDB.
+### 2. In the `slurmdbd.conf` file:
+* `DbdHost` and `StorageHost`: Change these to the hostname of your new Master node.
+* `StoragePass`:  Change the password `bccufj` to the password you defined for the slurm user in your MariaDB database.
 
-### 3. No arquivo `resume.sh`:
-* `MAC_LIST_FILE`: O script aponta para `/etc/slurm/mac_addresses.list`. Certifique-se de que este caminho esteja correto ou mova seu arquivo para este local.
-* `WOL_INTERFACE`: Altere o valor `"enp2s0"` para o nome da interface de rede do seu novo nó Mestre. Você pode encontrar o nome correto usando o comando `ip a`.
+### 3. In the `resume.sh` file:
+* `MAC_LIST_FILE`: The script points to `/etc/slurm/mac_addresses.list`. Ensure this path is correct or move your file to this location.
+* `WOL_INTERFACE`: Change the value `"enp2s0"` to the network interface name of your new Master node. You can find the correct name using the `ip a` command.
 
-### 4. No arquivo `mac_addresses.list`:
-* Apague todo o conteúdo e preencha com a lista dos seus novos nós e seus respectivos endereços MAC. Mantenha o formato `NomeDoNo endereço:mac`.
+### 4. In the `mac_addresses.list` file:
+* Delete all content and populate it with the list of your new nodes and their respective MAC addresses. Maintain the `NomeDoNo endereço:mac` format.
 
-## 🛠️ Pré-requisitos do Sistema para Gerenciamento de Energia
+## 🛠️ System Prerequisites for Power Management
 
-* **Para `suspend.sh` funcionar:**
-    * O script executa o comando `ssh slurm@${node} "sudo /sbin/poweroff"`.
-    * Isso exige que o acesso SSH sem senha do usuário `slurm` (do nó Mestre para todos os nós de computação) esteja configurado.     * Também exige que o usuário `slurm` tenha permissão para executar `sudo /sbin/poweroff` sem precisar de senha em todos os nós de computação. Esta permissão é configurada via `/etc/sudoers` (usando `sudo visudo`). 
+* **For  `suspend.sh` to work:**
+    * The script executes the command `ssh slurm@${node} "sudo /sbin/poweroff"`.
+    * This requires that passwordless SSH access for the `slurm` user (from the Master node to all compute nodes) be configured.
+     * It also requires that the `slurm` user has permission to execute `sudo /sbin/poweroff` without needing a password on all compute nodes. This permission is configured via `/etc/sudoers` (using `sudo visudo`). 
 
-* **Para `resume.sh` funcionar:**
-    * O script utiliza o comando `sudo /usr/sbin/etherwake`.
-    * O usuário `slurm` no nó Mestre precisa ter permissão para executar este comando via `sudo` sem senha.
+* **For  `resume.sh` to work:**
+    * The script uses the command `sudo /usr/sbin/etherwake`.
+    * The `slurm` user on the Master node needs to have permission to execute this command via `sudo` without a password.

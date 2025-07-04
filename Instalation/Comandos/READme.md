@@ -1,78 +1,81 @@
-# Guia de Instalação Manual de Cluster Slurm
+# Manual Installation Guide for a Slurm Cluster
 
-![Gerenciador](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
-![Autenticação](https://img.shields.io/badge/Autenticação-Munge-purple.svg)
-![Paralelismo](https://img.shields.io/badge/Paralelismo-Open%20MPI-orange.svg)
-![Rede](https://img.shields.io/badge/Rede-NFS-lightgrey.svg)
-![Linguagem](https://img.shields.io/badge/Comandos-Bash-yellow.svg)
+![Manager](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
+![Authentication](https://img.shields.io/badge/Autenticação-Munge-purple.svg)
+![Parallelism](https://img.shields.io/badge/Paralelismo-Open%20MPI-orange.svg)
+![Network](https://img.shields.io/badge/Rede-NFS-lightgrey.svg)
+![Language](https://img.shields.io/badge/Comandos-Bash-yellow.svg)
 
-Este repositório contém um conjunto de arquivos de texto com listas de comandos para a instalação manual e passo a passo de um cluster Slurm.  O objetivo é servir como um guia de consulta completo, permitindo que um administrador entenda a função de cada comando e adapte a instalação a um novo ambiente. 
+This repository contains a set of text files with lists of commands for the manual, step-by-step installation of a Slurm cluster. The goal is to serve as a complete reference guide, allowing an administrator to understand the function of each command and adapt the installation to a new environment.
 
-## ⚙️ Fluxo de Instalação
+## ⚙️ Installation Workflow
 
-A instalação segue uma ordem lógica e progressiva.  É crucial seguir a sequência numérica dos arquivos para garantir que as dependências de cada etapa sejam atendidas. 
+The installation follows a logical and progressive order. It is crucial to follow the numerical sequence of the files to ensure that the dependencies of each step are met.
 
-1.  **Configuração do Ambiente Base**: Preparação da infraestrutura de rede, tempo e arquivos. 
-2.  **Instalação da Autenticação**: Instalação e configuração do Munge para comunicação segura. 
-3.  **Instalação do Slurm**: Configuração do Nó Mestre e, em seguida, dos Nós de Computação. 
-4.  **Instalação do Suporte a MPI**: Compilação do Open MPI para permitir a execução de trabalhos paralelos. 
+1.  **Base Environment Configuration**: Preparation of the network, time, and file infrastructure.
+ 
+2.  **Authentication Installation**: Installation and configuration of Munge for secure communication. 
+3.  **Slurm Installation**: Configuration of the Master Node and then the Compute Nodes. 
+4.  **MPI Support Installation**: Compilation of Open MPI to allow the execution of parallel jobs.
 
-## 📄 Guia dos Arquivos de Comandos
+## 📄 Guide to the Command Files
 
-Aqui está a descrição de cada arquivo e onde seus comandos devem ser executados. 
+Here is a description of each file and where its commands should be executed.
 
-### `1-Comandos_Configurar_Ambiente_Base.txt`
-* **Objetivo**: Configurar os pré-requisitos essenciais para o funcionamento do cluster.
-* **Onde Executar**: Em **TODOS** os nós (Mestre e Computação).  O arquivo possui seções que se aplicam apenas ao mestre ou aos nós de computação, conforme indicado. 
+### `1-Commands_Configure_Base_Environment.txt`
+* **Objective**: To configure the essential prerequisites for the cluster's operation.
+* **Where to Execute**: On ALL nodes (Master and Compute). The file has sections that apply only to the master or the compute nodes, as indicated.
 
-### `2-Comandos_para_Instalar_Munge.txt`
-* **Objetivo**: Instalar e configurar o serviço de autenticação Munge. 
-* **Onde Executar**: Em **TODOS** os nós. 
+### `2-Commands_to_Install_Munge.txt`
+* **Objective**: To install and configure the Munge authentication service.
+* **Where to Execute**: On **ALL** nodes. 
 
-### `3-Comandos_para_Instalar_Slurm_(Nó Mestre).txt`
-* **Objetivo**: Instalar os componentes centrais ("cérebro") do cluster Slurm. 
-* **Onde Executar**: Apenas no **NÓ MESTRE**. 
+### `3-Commands_to_Install_Slurm_(Master_Node).txt`
+* **Objective**: To install the central components ("brain") of the Slurm cluster. 
+* **Where to Execute**: Only on the **MASTER NODE**.
 
-### `4-Comandos_para_Instalar_o_Slurm_(Nós_de_Computação).txt`
-* **Objetivo**: Instalar o serviço "trabalhador" do Slurm (`slurmd`). 
-* **Onde Executar**: Apenas nos **NÓS DE COMPUTAÇÃO**. 
+### `4-Commands_to_Install_Slurm_(Compute_Nodes).txt`
+* **Objective**: To install the Slurm "worker" service (`slurmd`).
+* **Where to Execute**: Only on the **COMPUTE NODES**.
 
-### `5-Comandos_para_Compilar_OpenMPI.txt`
-* **Objetivo**: Preparar o ambiente para a execução de trabalhos paralelos de alto desempenho. 
-* **Onde Executar**: Em **TODOS** os nós. 
+### `5-Commands_to_Compile_OpenMPI.txt`
+* **Objective**: To prepare the environment for executing high-performance parallel jobs.
+* **Where to Execute**: On **ALL** nodes.
 
-## ⚠️ Pontos de Alteração Obrigatórios
+## ⚠️ Mandatory Change Points
 
-Antes de executar os comandos, revise e altere os seguintes valores para que correspondam ao seu ambiente.
+Before executing the commands, review and change the following values to match your environment.
 
-### Passo 1: `1-Comandos_Configurar_Ambiente_Base.txt` 
-* **Mapeamento de Rede**: Altere a lista de IPs e Nomes de Nós na seção de configuração do arquivo `/etc/hosts`. 
-* **Configuração do NFS**:
-    * Altere a faixa de rede (ex: `192.168.1.0/24`) no comando de configuração do `/etc/exports`. 
-    * Altere o IP do nó Mestre no comando `sudo mount ...`. 
-* **Configuração do SSH**: Altere a lista de comandos `ssh-copy-id` para incluir os nomes de usuário e de nós corretos para o seu cluster. 
+### Step 1: `1-Commands_Configure_Base_Environment.txt` 
+* **Network Mapping**: Change the list of IPs and Node Names in the configuration section of the `/etc/hosts` file. 
+* **NFS Configuring**:
+    * Change the network range (ex: `192.168.1.0/24`) in the configuration command for `/etc/exports`. 
+    * Change the Master node's IP in the `sudo mount ...` command. 
+* **SSH Configuration**: Change the list of `ssh-copy-id` commands to include the correct usernames and node names for your cluster. 
 
-### Passo 2: `2-Comandos_para_Instalar_Munge.txt` 
-* **(Opcional) IDs de Usuário**: Os IDs para os usuários `munge` e `slurm` estão fixos como `1001` e `1002`.  Pode ser necessário alterar esses valores se eles já estiverem em uso no seu sistema. 
+### Step 2: `2-Commands_to_Install_Munge.txt`
+* **(Optional) User IDs**: The IDs for the `munge` and `slurm` users are fixed as `1001` and `1002`. It may be necessary to change these values if they are already in use on your system.
 
-### Passo 3: `3-Comandos_para_Instalar_Slurm_(Nó Mestre).txt` 
-Este passo envolve a edição de vários arquivos de configuração.
+### Step 3: `3-Commands_to_Install_Slurm_(Master_Node).txt` 
+This step involves editing several configuration files.
 
-* **No arquivo `slurmdbd.conf`:**
-    * **Senha do Banco de Dados**: A senha do usuário 'slurm' para o MariaDB está definida como `'bccufj07'`.  É crucial alterá-la tanto no comando SQL `GRANT ALL...` quanto no parâmetro `StoragePass=...` dentro deste arquivo. 
-    * **Host do Banco de Dados**: Verifique se `DbdHost` e `StorageHost` correspondem ao nome do seu novo nó Mestre. 
-* **No arquivo `slurm.conf`:**
-    * `SlurmctldHost`: Deve conter o nome correto do seu nó Mestre. 
-    * `NodeName`: As linhas `NodeName=...` devem ser reescritas para listar os nomes e as configurações de CPU/memória corretas para cada um dos seus nós. 
-    * `PartitionName`: As linhas `PartitionName=...` devem ser ajustadas para refletir quais nós pertencem a cada partição. 
-* **No script `resume.sh`:**
-    * `WOL_INTERFACE`: O valor está fixo como `"enp2s0"`.  Você **DEVE** encontrar o nome correto da interface de rede do seu novo nó Mestre (usando `ip a`) e atualizar esta variável. 
-* **No arquivo `mac_addresses.list`:**
-    * Este arquivo deve ser **completamente reescrito** com os nomes e endereços MAC correspondentes aos seus novos nós de computação. 
-* **Pré-requisitos de Sistema para Energia:**
-    * Para que os scripts `suspend.sh` e `resume.sh` funcionem, o usuário `slurm` precisa de permissões `sudo` sem senha.  Use `sudo visudo` para garantir que: 
-        1.  No **Nó Mestre**, `slurm` possa executar `/usr/sbin/etherwake`. 
-        2.  Em **TODOS os Nós de Computação**, `slurm` possa executar `/sbin/poweroff`. 
+* **In the `slurmdbd.conf` file:** 
+    * **Database Password**: The password for the 'slurm' user for MariaDB is set to  `'bccufj07'`. It is crucial to change it in both the  `GRANT ALL...` SQL command and in the `StoragePass=...` parameter within this file.
+    * **Database Host**: Verify that `DbdHost` and `StorageHost` match the name of your new Master node. 
+* **In the `slurm.conf` file:**
+    * `SlurmctldHost`: Must contain the correct name of your Master node. 
+    * `NodeName`: The `NodeName=...` lines must be rewritten to list the correct names and CPU/memory configurations for each of your nodes.
+    * `PartitionName`: The `PartitionName=...` lines must be adjusted to reflect which nodes belong to each partition.
 
-### Passo 5: `5-Comandos_para_Compilar_OpenMPI.txt` 
-* **Versão do Open MPI**: A versão `4.1.5` está fixa nos comandos `wget`, `cd` e `configure`.  Se você precisar de outra versão, deverá alterar o número em cada um desses comandos. 
+* **In the `resume.sh` script:**
+    * `WOL_INTERFACE`: The value is fixed as `"enp2s0"`. You MUST find the correct network interface name of your new Master node (using `ip a`) and update this variable. 
+* **In the `mac_addresses.list` file:**
+    * This file must be completely rewritten with the names and corresponding MAC addresses of your new compute nodes.
+
+* **System Prerequisites for Power Management:**
+    * For the `suspend.sh` and `resume.sh` scripts to work, the `slurm` userneeds `sudo` permissions without a password. Use `sudo visudo` to ensure that:
+        1.  On the **Nó Mestre**, `slurm` can execute `/usr/sbin/etherwake`. 
+        2.  On the **ALL Compute Nodes,**, `slurm` can execute `/sbin/poweroff`. 
+
+### Step 5: `5-Commands_to_Compile_OpenMPI.txt` 
+* **Open MPI Version:**: The version used in this work is `4.1.5` and is fixed in the `wget`, `cd` and `configure`. If you need another version, you must change the number in each of these commands.

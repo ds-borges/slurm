@@ -1,68 +1,70 @@
- # Guia de Instalação Semi-Automática de Cluster Slurm
+ # Semi-Automatic Slurm Cluster Installation Guide
 
-![Nível](https://img.shields.io/badge/Automação-Semi--Automática-orange.svg)
-![Linguagem](https://img.shields.io/badge/Scripts-Bash-yellow.svg)
-![Gerenciador](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
-![Protocolo](https://img.shields.io/badge/Protocolo-SSH-lightgrey.svg)
+![Nivel](https://img.shields.io/badge/Automação-Semi--Automática-orange.svg)
+![Language](https://img.shields.io/badge/Scripts-Bash-yellow.svg)
+![Manager](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
+![Protocol](https://img.shields.io/badge/Protocolo-SSH-lightgrey.svg)
 
-Este guia detalha o uso dos scripts para uma instalação semi-automática do Slurm. Os scripts foram projetados para automatizar a grande maioria dos comandos, mas exigem a supervisão e intervenção de um administrador em pontos-chave. 
+This guide details the use of scripts for a semi-automatic Slurm installation. The scripts are designed to automate the vast majority of commands but require an administrator's supervision and intervention at key points.
 
-> Pense neles como "semi-automáticos". Eles executam as tarefas pesadas, mas ainda precisam de um piloto. 
+> Think of them as "semi-automatic." They do the heavy lifting but still need a pilot. 
 
-## 🛠️ Pontos de Intervenção Necessária
+## 🛠️ Points of Necessary Intervention
 
-É crucial entender onde sua ação será necessária para garantir que a instalação ocorra sem problemas.
+It is crucial to understand where your action will be needed to ensure the installation proceeds smoothly.
 
-### 1. Intervenção Durante a Execução: Senhas
+### 1. In-Execution Intervention: Passwords
 
-* **Senha do SSH**: Este é o principal ponto de parada durante a execução. 
-    * O script `01-configurar-ambiente-base.sh` usa o comando `ssh-copy-id` para configurar o acesso sem senha entre os nós. 
-    * Você precisará digitar a senha de cada nó do cluster uma vez quando o script solicitar.  Esta é uma medida de segurança intencional. 
-* **Senha do `sudo`**: Cada script deve ser executado com privilégios de superusuário (`sudo`).  É provável que o sistema solicite sua senha de administrador no início da execução de cada um dos cinco scripts. 
+* **SSH Password**: This is the main stopping point during execution. 
+    * The `To_Configure_Base_Environment.sh` script uses the `ssh-copy-id` command to configure passwordless access between nodes. 
+    * You will need to enter the password for each cluster node once when the script prompts you. This is an intentional security measure. 
+* **`sudo` password**: Each script must be executed with superuser privileges (`sudo`). The system will likely ask for your administrator password at the beginning of the execution of each of the five scripts.. 
 
-### 2. Intervenção de Preparação: Adaptação dos Scripts
-Antes de executar qualquer coisa, você **precisa** editar os scripts para que correspondam ao seu ambiente. 
+### 2. Preparation Intervention: Script Adaptation
 
-* **Endereços IP e Nomes dos Nós**: No script `01-configurar-ambiente-base.sh`, garanta que a lista de IPs e nomes no arquivo `/etc/hosts` e na variável `NODES` esteja correta para o seu cluster. 
-* **Arquivo `slurm.conf`**: O script `03-Instalar-slurm-mestre.sh` contém um `slurm.conf` mínimo apenas como exemplo.  Para um cluster real, você deve gerar uma configuração completa (usando o gerador online do Slurm, por exemplo) e substituir o conteúdo de exemplo dentro do script pelo seu. 
-* **Senha do Banco de Dados**: A senha para o usuário `slurm` do MariaDB está definida como `'bccufj07'` no script `03`.  Se você alterar essa senha no script, lembre-se de atualizar também o campo `StoragePass` no arquivo `slurmdbd.conf`. 
+Before executing anything, you must edit the scripts to match your environment. 
 
-### 3. Intervenção Potencial: Resolução de Erros
-* A automação não lida com a resolução de problemas.  Se um comando falhar por qualquer motivo (problema de rede, conflito de pacotes, etc.), o script irá parar.  Isso exigirá sua intervenção manual para corrigir o erro e reiniciar o processo. 
+* **IP Addresses and Node Names**: In the `01-To_Configure_Base_Environment.sh` script, script, ensure that the list of IPs and names in the `/etc/hosts` file and in the `NODES` variable is correct for your cluster. 
+* **`slurm.conf` file**: The `03-Instalar-slurm-mestre.sh` script  contains a minimal `slurm.conf` file for example purposes only. For a real cluster, you should generate a complete configuration (using Slurm's online generator, for example) and replace the example content inside the script with yours.
+* **Database Password**: The password for the MariaDB `slurm` user is set to `'bccufj'` in script `03`.  If you change this password in the script, remember to also update the `StoragePass` field in the `slurmdbd.conf` file. 
 
-## 🚀 Como Executar os Scripts
+### Potential Intervention: Error Resolution
+* Automation does not handle troubleshooting. If a command fails for any reason (network issue, package conflict, etc.), the script will stop. This will require your manual intervention to fix the error and restart the process.
 
-### Passo 1: Conceder Permissão de Execução
-Primeiro, torne todos os scripts executáveis com o comando `chmod +x`.
+## 🚀 How to Run the Scripts
 
-```bash
-chmod +x 01-Configurar-ambiente-base.sh
-chmod +x 02-Instalar-munge.sh
-chmod +x 03-Instalar-slurm-mestre.sh
-chmod +x 04-Instalar-slurm-no-computacao.sh
-chmod +x 05-Compilar-openmpi.sh
-```
+### Step 1: Grant Execution Permission
+First, make all scripts executable with the `chmod +x` command.
 
-### Passo 2: Executar na Ordem Correta
-Execute os scripts com `sudo` e na sequência numérica correta, prestando atenção em quais nós cada script deve ser executado. 
 
 ```bash
-# Execute o script 01 em TODOS os nós
-sudo ./01-Configurar-ambiente-base.sh
-
-# Execute o script 02 em TODOS os nós
-sudo ./02-Instalar-munge.sh
-
-# Execute o script 03 APENAS no nó Mestre
-sudo ./03-Instalar-slurm-mestre.sh
-
-# Execute o script 04 APENAS nos nós de Computação
-sudo ./04-Instalar-slurm-no-computacao.sh
-
-# Execute o script 05 em TODOS os nós
-sudo ./05-Compilar-openmpi.sh
+chmod +x 01-To_Configure_Base_Environment.sh
+chmod +x 02-To_Install_Munge.txt.sh
+chmod +x 03-To_Install_Slurm_(Master_Node).sh
+chmod +x 04-To_Install_Slurm_(Compute_Nodes).sh
+chmod +x 05-To_Compile_OpenMPI.sh
 ```
 
-## 🏁 Conclusão
+### Step 2: Execute in the Correct Order
+Run the scripts with `sudo` and in the correct numerical sequence, paying attention to which nodes each script should be executed on
 
-O uso destes scripts elimina a necessidade de digitar centenas de comandos manualmente, o que reduz drasticamente o tempo de instalação e a chance de erros de digitação. No entanto, eles ainda exigem um administrador para prepará-los, fornecer as senhas iniciais e supervisionar o processo.
+```bash
+# Run script 01 on ALL nodes
+sudo 01-To_Configure_Base_Environment.sh
+
+# Run script 02 on ALL nodes
+sudo ./02-To_Install_Munge.txt.sh
+
+# Run script 03 ONLY on the Master node
+sudo ./03-To_Install_Slurm_(Master_Node).sh
+
+# Run script 04 ONLY on the Compute nodes
+sudo ./04-To_Install_Slurm_(Compute_Nodes).sh
+
+# Run script 05 on ALL nodes
+sudo ./05-To_Compile_OpenMPI.sh
+```
+
+## 🏁 Conclusion
+
+Using these scripts eliminates the need to type hundreds of commands manually, which drastically reduces installation time and the chance of typos. However, they still require an administrator to prepare them, provide the initial passwords, and supervise the process.

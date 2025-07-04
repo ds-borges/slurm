@@ -1,46 +1,46 @@
-# Guia de Instalação de Cluster Slurm
+# Slurm Cluster Installation Guide
 
-![Plataforma](https://img.shields.io/badge/Plataforma-Linux-green.svg)
-![Gerenciador](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
-![Linguagem](https://img.shields.io/badge/Scripts-Bash-orange.svg)
+![Platform](https://img.shields.io/badge/Plataforma-Linux-green.svg)
+![Manager](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
+![Language](https://img.shields.io/badge/Scripts-Bash-orange.svg)
 
-Bem-vindo a este projeto de instalação e configuração de um cluster com o Slurm Workload Manager. Este repositório está organizado para oferecer flexibilidade, permitindo que você escolha o método de instalação que melhor se adapta às suas necessidades.
+Welcome to this project for installing and configuring a cluster with the Slurm Workload Manager. This repository is organized to offer flexibility, allowing you to choose the installation method that best suits your needs.
 
-## 📁 Estrutura do Repositório
+## 📁 Repository Structure
 
-O projeto é dividido em três subpastas principais, cada uma com um propósito específico.
+The project is divided into three main subfolders, each with a specific purpose.
 
-### 1. `Arquivos do Slurm/`
-Esta pasta contém os arquivos de configuração finalizados e prontos para serem adaptados.
+### 1. `Slurm Files/`
+This folder contains the finalized configuration files, ready to be adapted.
 
-* **Conteúdo**: Inclui os arquivos essenciais como `slurm.conf`, `slurmdbd.conf`, `cgroup.conf` e os scripts de gerenciamento de energia (`resume.sh`, `suspend.sh`).
-* **Uso**: Funciona como um conjunto de "modelos" universais para a configuração final do cluster. Estes arquivos devem ser utilizados independentemente do método de instalação escolhido (manual ou via script).
-* **Adaptação**: Contém um `READme.md` que serve como um guia detalhado para customizar os arquivos (ajustar IPs, nomes dos nós, senhas, etc.) para o seu ambiente específico.
+* **Content**: Includes essential files like`slurm.conf`, `slurmdbd.conf`, `cgroup.conf` and power management scripts (`resume.sh`, `suspend.sh`).
+* **Usage**:  It serves as a set of universal "templates" for the final cluster configuration. These files should be used regardless of the chosen installation method (manual or scripted).
+* **Adaptation**: Contains a `READme.md` that serves as a detailed guide for customizing the files (adjusting IPs, node names, passwords, etc.) for your specific environment.
 
-### 2. `Comandos/`
-Esta pasta oferece uma abordagem de instalação manual e detalhada.
+### 2. `Commands/`
+This folder offers a detailed, manual installation approach.
 
-* **Conteúdo**: Cinco arquivos `.txt`, cada um contendo uma lista de comandos para uma etapa específica da instalação (ex: Ambiente Base, Munge, Slurm Mestre).
-* **Uso**: Ideal para quem deseja realizar uma instalação **manual e controlada**, executando e validando cada comando passo a passo. É uma excelente abordagem para fins de aprendizado ou para depurar problemas em etapas específicas do processo.
-* **Guia**: Inclui um `READme.md` que explica o objetivo de cada um dos cinco arquivos de comandos.
+* **Content**: Five `.txt` files, each containing a list of commands for a specific installation step (e.g., Base Environment, Munge, Slurm Master).
+* **Usage**: Ideal for those who want to perform a `manual and controlled` installation, executing and validating each command step-by-step. It is an excellent approach for learning purposes or for debugging issues in specific stages of the process.
+* **Guide**: Includes a `READme.md` that explains the purpose of each of the five command files.
 
 ### 3. `Script/`
-Esta pasta oferece uma abordagem de instalação mais rápida e automatizada.
+This folder offers a faster, more automated installation approach.
 
-* **Conteúdo**: Cinco scripts executáveis (`.sh`) que automatizam a execução dos comandos de cada etapa da instalação.
-* **Uso**: Ideal para quem busca uma instalação **semi-automática** e mais ágil. Os scripts ainda exigem intervenção manual em pontos específicos, como a digitação de senhas.
-* **Guia**: Inclui um `README.md` que detalha como conceder permissões de execução aos scripts e aponta os momentos que exigem intervenção do usuário.
+* **Content**: Five executable scripts (`.sh`) that automate the execution of commands for each installation step.
+* **Usage**: Ideal for those seeking a **semi-automatic** and more agile installation. The scripts still require manual intervention at specific points, such as entering passwords.
+* **Guide**: Includes a `README.md` that details how to grant execution permissions to the scripts and points out the moments that require user intervention.
 
-## 🤔 Qual Método Escolher?
+## 🤔  Which Method to Choose??
 
-* **Opção 1: Instalação Manual (`Comandos/`)**
-    * **Vantagem**: Controle total sobre o processo, ideal para entender cada detalhe da instalação e para solucionar problemas de forma granular.
+* **Option 1: Manual Installation (`Commands/`)**
+    * **Advantage**: Full control over the process, ideal for understanding every detail of the installation and for granular troubleshooting.
 
-* **Opção 2: Instalação Semi-Automática (`Script/`)**
-    * **Vantagem**: Maior velocidade e conveniência, automatizando tarefas repetitivas.
+* **Option 2: Semi-Automatic Installation (`Script/`)**
+    * **Advantage**: Greater speed and convenience, automating repetitive tasks.
 
-## 🚀 Começando
+## 🚀 Getting Started
 
-1.  **Configure os Arquivos Base**: Antes de tudo, vá para a pasta `Arquivos do Slurm/`. Leia o `READme_Tecnico.md` e edite os arquivos de configuração (`.conf`) para que correspondam ao hardware e à rede do seu cluster.
-2.  **Escolha seu Método**: Decida se prefere a instalação manual (`Comandos/`) ou a semi-automática (`Script.
-3.  **Siga as Instruções**: Navegue até a pasta escolhida e siga as instruções contidas no `READme.md` local para iniciar a instalação.
+1.  **Configure the Base Files**: First of all, go to the `Arquivos do Slurm/` folder. Read the `READme.md` and edit the configuration files (`.conf`) to match your cluster's hardware and network.
+2.  **Choose Your Method**: Decide whether you prefer the manual (`Commands/`) or semi-automatic (`Script/`) installation.
+3.  **Follow the Instructions**:  Navigate to the chosen folder and follow the instructions in the local `README.md` to begin the installation.
