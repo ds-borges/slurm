@@ -1,35 +1,35 @@
-# Repositório de Instalação e Testes de Cluster Slurm
+# Slurm Cluster Installation and Testing Repository
 
-![Gerenciador](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
-![Paralelismo](https://img.shields.io/badge/Paralelismo-Open%20MPI-orange.svg)
-![Linguagem](https://img.shields.io/badge/Linguagem-C%20%7C%20Bash-yellow.svg)
-![Plataforma](https://img.shields.io/badge/Plataforma-Linux-green.svg)
+![Manager](https://img.shields.io/badge/Gerenciador-Slurm-blue.svg)
+![Parallelism](https://img.shields.io/badge/Paralelismo-Open%20MPI-orange.svg)
+![Language](https://img.shields.io/badge/Linguagem-C%20%7C%20Bash-yellow.svg)
+![Platform](https://img.shields.io/badge/Plataforma-Linux-green.svg)
 
-Bem-vindo a este repositório, cujo principal objetivo é **auxiliar na implementação de um cluster com Slurm**, desde a criação e configuração até a validação funcional. O conteúdo está organizado para ser um guia completo para a construção de um ambiente de computação de alto desempenho (HPC), dividido em duas seções principais: **Instalação** e **Testes**.
+Welcome to this repository, whose main objective is to assist in the implementation of a Slurm cluster, from creation and configuration to functional validation. The content is organized to be a complete guide for building a high-performance computing (HPC) environment, divided into two main sections: **Installation** and **Tests**.
 
-## 📁 Estrutura do Repositório
+## 📁 Repository Structure
 
-O conteúdo está organizado em duas pastas principais para facilitar o uso:
+The content is organized into two main folders for ease of use:
 
 ### 1. `/Instalation`
-Esta pasta contém tudo o que você precisa para construir um cluster Slurm funcional do zero. Dentro dela, você encontrará três abordagens diferentes, cada uma com sua própria documentação detalhada:
+This folder contains everything you need to build a functional Slurm cluster from scratch. Inside, you will find three different approaches, each with its own detailed documentation:
 
-* **`/Arquivos do Slurm`**: Contém os arquivos de configuração finalizados (`slurm.conf`, `cgroup.conf`, `slurmdbd.conf`, etc.). Eles servem como modelos que devem ser customizados para o seu ambiente antes da instalação. Consulte o `README.md` técnico dentro desta pasta para um guia de customização.
-* **`/Comandos`**: Oferece um guia para a **instalação manual** do cluster. É a abordagem ideal para quem deseja aprender cada etapa do processo e ter controle total.
-* **`/Script`**: Oferece scripts para uma **instalação semi-automática**. Esta abordagem é mais rápida e reduz a chance de erros, mas ainda exige a intervenção do administrador em pontos-chave.
+* **`/Slurm Files`**: Contains the finalized configuration files (`slurm.conf`, `cgroup.conf`, `slurmdbd.conf`, etc.).  They serve as templates that must be customized for your environment before installation. Refer to the technical `README.md` inside this folder for a customization guide.
+* **`/Commands`**: Offers a guide for the manual installation of the cluster. It is the ideal approach for those who want to learn each step of the process and have full control.
+* **`/Script`**: Provides scripts for a semi-automatic installation. This approach is faster and reduces the chance of errors, but still requires administrator intervention at key points.
 
 ### 2. `/Tests`
-Após a instalação bem-sucedida do cluster, esta pasta oferece os recursos para validar seu funcionamento.
+After the successful installation of the cluster, this folder offers the resources to validate its functionality.
 
-* **Objetivo**: Verificar se o cluster está operacional, se os jobs são submetidos corretamente e se o ambiente de computação paralela (MPI) está funcionando como esperado.
-* **Conteúdo**: Inclui um exemplo de código em C com MPI para **calcular o valor de Pi** usando o método de Monte Carlo. Este é um teste clássico de HPC que utiliza múltiplos nós para realizar um cálculo intensivo.
-* **Instruções**: Dentro desta pasta, você encontrará um `README.md` com instruções detalhadas sobre como compilar e executar o teste de validação no seu novo cluster.
+* **Objective**: To verify that the cluster is operational, that jobs are submitted correctly, and that the parallel computing environment (MPI) is working as expected.
+* **Content**: Includes a C code example with MPI to calculate the value of Pi using the Monte Carlo method. This is a classic HPC test that uses multiple nodes to perform an intensive calculation.
+* **Instructions**: Inside this folder, you will find a `README.md` with detailed instructions on how to compile and run the validation test on your new cluster.
 
-## 🚀 Como Usar Este Repositório
+## 🚀 How to Use This Repository
 
-Siga este fluxo de trabalho para obter os melhores resultados:
+Follow this workflow for the best results:
 
-1.  **Comece pela Instalação**: Navegue até a pasta `/Instalation` para iniciar a construção do seu cluster.
-2.  **Escolha seu Método**: Decida entre a abordagem manual (`/Comandos`) ou a semi-automática (`/Script`) e siga as instruções do `README.md` correspondente.
-3.  **Valide o Cluster**: Uma vez que o cluster esteja online e os serviços do Slurm estejam rodando, vá para a pasta `/Tests`.
-4.  **Execute o Teste**: Siga as instruções para executar o programa de cálculo de Pi. Um resultado bem-sucedido confirma que seu cluster está pronto para processar trabalhos de alto desempenho.
+1.  **Start with the Installation**: Navigate to the `/Installation` folder to begin building your cluster.
+2.  **Choose Your Method**: Decide between the manual (`/Commands`) or semi-automatic (`/Script`) approach and follow the instructions in the corresponding `README.md`.
+3.  **Validate the Cluster**: Once the cluster is online and the Slurm services are running, go to the `/Tests` folder.
+4.  **Run the Tes**: Follow the instructions to run the Pi calculation program. A successful result confirms that your cluster is ready to process high-performance jobs.
