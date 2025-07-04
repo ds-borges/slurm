@@ -104,16 +104,16 @@ Para executar com **4 processos** e **1 bilhão de tiros**:
 mpirun -np 4 ./pi_exec_monte_carlo 1000000000
 ```
 
-## 📊 Exemplo de Saída
-A saída do programa, que será encontrada no arquivo de log do Slurm, terá o seguinte formato:
+## 📊 Output Example
+The program's output, which will be found in the Slurm log file, will have the following format:
 ```
 ====================================================
-Cálculo de Pi com MPI e Método de Monte Carlo
+Calculation of Pi with MPI and Monte Carlo Method
 ----------------------------------------------------
-Número de processos MPI...: 16
-Total de tiros............: 100000000000
-Total de acertos..........: 78539815000
-Tempo de execução do cálculo: 152.731982 segundos
-Valor estimado de Pi......: 3.141592600000000
+Number of MPI processes...: 16
+Total shots............: 100000000000
+Total hits..........: 78539815000
+Calculation execution time: 152.731982 segundos
+Estimated value of Pi......: 3.141592600000000
 ====================================================
 ```
