@@ -1,4 +1,8 @@
-# Cálculo de Pi com MPI e o Método de Monte Carlo
+# Cálculo de Pi com MPI, Slurm e o Método de Monte Carlo
+
+![Linguagem](https://img.shields.io/badge/Linguagem-C-blue.svg)
+![Paralelismo](https://img.shields.io/badge/Framework-MPI-orange.svg)
+![Cluster](https://img.shields.io/badge/Gerenciador-Slurm-red.svg)
 
 Este projeto demonstra como calcular o valor de Pi (π) utilizando o método estatístico de Monte Carlo. A implementação é feita em C e utiliza o padrão MPI (Message Passing Interface) para paralelizar o cálculo e executá-lo de forma eficiente em um cluster de computadores.
 
